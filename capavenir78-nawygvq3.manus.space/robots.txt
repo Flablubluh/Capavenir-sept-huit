@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /api/*
+Sitemap: https://capavenir78-nawygvq3.manus.space/sitemap.xml
