@@ -3,7 +3,7 @@ content:
   - name: actus
     label: Actualités
     type: collection
-    path: actus
+    path: src/actus
     fields:
       - name: title
         type: string
