@@ -37,14 +37,27 @@ module.exports = function (eleventyConfig) {
   /* ── Strip markdown images ──────────────────────── */
   eleventyConfig.addFilter("stripMarkdownImages", (str) => {
     if (!str) return "";
-    return str.replace(/!\[[^\]]*\]\([^)]+\)/g, "").trim();
+    return str.replace(/!\[[^\]]*\]\(<?[^>]*?>?\)/g, "").replace(/<img[^>]*>/gi, "").trim();
   });
 
   /* ── Extract first image from markdown ──────────── */
   eleventyConfig.addFilter("firstImage", (str) => {
     if (!str) return null;
-    const match = str.match(/!\[[^\]]*\]\(([^)]+)\)/);
-    return match ? match[1] : null;
+    const reMd = /!\[[^\]]*\]\(<?([^>]*?)>?\s*(?:"([^"]*)")?\)/;
+    const reHtml = /<img[^>]+src="([^"]+)"[^>]*>/i;
+    let src = null;
+    let hint = "";
+    const md = str.match(reMd);
+    if (md) {
+      src = md[1].trim();
+      hint = md[2] || "";
+    } else {
+      const html = str.match(reHtml);
+      if (html) src = html[1];
+    }
+    if (!src) return null;
+    const crops = { top: "ob-top", bottom: "ob-bottom", left: "ob-left", right: "ob-right" };
+    return { src: src, crop: crops[hint] || "" };
   });
 
   /* ── Markdown library config: add classes to images ─ */
@@ -54,6 +67,14 @@ module.exports = function (eleventyConfig) {
     };
     mdLib.renderer.rules.image = function (tokens, idx, options, env, self) {
       const token = tokens[idx];
+      const crops = ["top", "bottom", "left", "right"];
+      const titleIdx = token.attrIndex("title");
+      if (titleIdx >= 0) {
+        const title = token.attrs[titleIdx][1];
+        if (crops.includes(title)) {
+          token.attrs.splice(titleIdx, 1);
+        }
+      }
       token.attrPush(["class", "w-full h-auto rounded-2xl shadow-lg my-6"]);
       token.attrPush(["loading", "lazy"]);
       return defaultRender(tokens, idx, options, env, self);
