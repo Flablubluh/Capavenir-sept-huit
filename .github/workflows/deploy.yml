@@ -32,6 +32,9 @@ jobs:
       - name: Create tarball
         run: (cd _site && shopt -s dotglob && tar -czf ../site.tar.gz *)
 
+      - name: Generate checksum
+        run: sha256sum site.tar.gz > site.tar.gz.sha256
+
       - name: Debug tarball contents
         run: tar -tzf site.tar.gz | head -20
 
@@ -49,12 +52,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create latest site.tar.gz \
+          gh release create latest site.tar.gz site.tar.gz.sha256 \
             --title "${{ steps.meta.outputs.version }}" \
             --notes "Build ${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.datetime }}
 
-          ### Download
+          ### Download &amp; verify
           \`\`\`
           curl -LO ${{ github.server_url }}/${{ github.repository }}/releases/download/latest/site.tar.gz
+          curl -LO ${{ github.server_url }}/${{ github.repository }}/releases/download/latest/site.tar.gz.sha256
+          sha256sum -c site.tar.gz.sha256
           \`\`\`
           Do **not** use the Source code archive — use the attached **site.tar.gz** asset."
