@@ -30,18 +30,18 @@ jobs:
           echo "datetime=$d" >> $GITHUB_OUTPUT
 
       - name: Create tarball
-        run: tar -czf site-latest.tar.gz -C _site .
+        run: shopt -s dotglob && tar -czf site.tar.gz -C _site *
 
       - name: Debug tarball contents
-        run: tar -tzf site-latest.tar.gz | head -20
+        run: tar -tzf site.tar.gz | head -20
 
       - name: Verify output
-        run: ls -lh _site/index.html _site/actualites/index.html site-latest.tar.gz
+        run: ls -lh _site/index.html _site/actualites/index.html site.tar.gz
 
       - uses: actions/upload-artifact@v4
         with:
           name: site-${{ steps.meta.outputs.version }}
-          path: site-latest.tar.gz
+          path: site.tar.gz
           compression-level: 0
 
       - name: Publish release
@@ -49,12 +49,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create latest site-latest.tar.gz \
+          gh release create latest site.tar.gz \
             --title "${{ steps.meta.outputs.version }}" \
             --notes "Build ${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.datetime }}
 
           ### Download
           \`\`\`
-          curl -LO ${{ github.server_url }}/${{ github.repository }}/releases/download/latest/site-latest.tar.gz
+          curl -LO ${{ github.server_url }}/${{ github.repository }}/releases/download/latest/site.tar.gz
           \`\`\`
           Do **not** use the Source code archive — use the attached **site.tar.gz** asset."
