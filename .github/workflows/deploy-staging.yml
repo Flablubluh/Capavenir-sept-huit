@@ -39,12 +39,11 @@ jobs:
           compression-level: 0
 
       - name: Publish staging release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v2
         with:
           tag: staging
           name: "Staging ${{ env.VERSION }}"
           body: "Staging build ${{ env.VERSION }} — ${{ env.DATETIME }}"
           artifacts: "site-staging-${{ env.VERSION }}.tar.gz"
-          allowUpdates: true
+          makeLatest: false
           removeArtifacts: true
-          token: ${{ secrets.GITHUB_TOKEN }}

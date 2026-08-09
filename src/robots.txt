@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /assets/fonts/
-Sitemap: https://capavenir78-nawygvq3.manus.space/sitemap.xml
