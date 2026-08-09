@@ -54,7 +54,7 @@ module.exports = function (eleventyConfig) {
     };
     mdLib.renderer.rules.image = function (tokens, idx, options, env, self) {
       const token = tokens[idx];
-      token.attrPush(["class", "max-w-full h-auto rounded-2xl shadow-lg my-6"]);
+      token.attrPush(["class", "max-w-md w-full h-auto rounded-2xl shadow-lg my-6 block mx-auto"]);
       token.attrPush(["loading", "lazy"]);
       return defaultRender(tokens, idx, options, env, self);
     };
