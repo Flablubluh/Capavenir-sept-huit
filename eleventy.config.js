@@ -57,7 +57,9 @@ module.exports = function (eleventyConfig) {
     }
     if (!src) return null;
     const crops = { top: "ob-top", bottom: "ob-bottom", left: "ob-left", right: "ob-right" };
-    return { src: src, crop: crops[hint] || "" };
+    if (crops[hint]) return { src: src, cropClass: crops[hint], cropStyle: "" };
+    if (/^\d{1,3}%$/.test(hint)) return { src: src, cropClass: "", cropStyle: "object-position: center " + hint };
+    return { src: src, cropClass: "", cropStyle: "" };
   });
 
   /* ── Markdown library config: add classes to images ─ */
@@ -67,11 +69,11 @@ module.exports = function (eleventyConfig) {
     };
     mdLib.renderer.rules.image = function (tokens, idx, options, env, self) {
       const token = tokens[idx];
-      const crops = ["top", "bottom", "left", "right"];
+      const cropHints = ["top", "bottom", "left", "right"];
       const titleIdx = token.attrIndex("title");
       if (titleIdx >= 0) {
         const title = token.attrs[titleIdx][1];
-        if (crops.includes(title)) {
+        if (cropHints.includes(title) || /^\d{1,3}%$/.test(title)) {
           token.attrs.splice(titleIdx, 1);
         }
       }
