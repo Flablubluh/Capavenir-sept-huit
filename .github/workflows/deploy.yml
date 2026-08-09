@@ -1,7 +1,9 @@
-name: Build and Deploy
+name: Build
 
 on:
   push:
+    branches: [master]
+  pull_request:
     branches: [master]
   workflow_dispatch:
 
@@ -14,13 +16,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy to pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Create tarball
+        run: tar -czf site.tar.gz _site/
+
+      - uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: pages
+          name: site
+          path: site.tar.gz
