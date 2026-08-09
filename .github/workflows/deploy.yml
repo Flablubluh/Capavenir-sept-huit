@@ -5,15 +5,11 @@ on:
     branches: [master]
   workflow_dispatch:
 
-permissions:
-  contents: write        # required for gh release
-
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      actions: read
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -25,17 +21,31 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Set version
-        run: echo "VERSION=$(date -u '+%Y-%j-%H')" >> $GITHUB_ENV
+      - name: Set version & date
+        id: version
+        run: |
+          echo "VERSION=$(date -u '+%Y-%j-%H')" >> $GITHUB_ENV
+          echo "DATETIME=$(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_ENV
 
       - name: Create tarball
-        run: tar -czf "site-${{ env.VERSION }}.tar.gz" _site/
+        run: tar -czf "site-$VERSION.tar.gz" _site/
 
       - name: Verify output
-        run: ls -lh _site/index.html _site/actualites/index.html "site-${{ env.VERSION }}.tar.gz"
+        run: ls -lh _site/index.html _site/actualites/index.html "site-$VERSION.tar.gz"
 
       - uses: actions/upload-artifact@v4
         with:
           name: site-${{ env.VERSION }}
           path: site-${{ env.VERSION }}.tar.gz
           compression-level: 0
+
+      - name: Publish latest release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          name: "Build ${{ env.VERSION }}"
+          body: "Build ${{ env.VERSION }} — ${{ env.DATETIME }}"
+          artifacts: "site-${{ env.VERSION }}.tar.gz"
+          allowUpdates: true
+          removeArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
