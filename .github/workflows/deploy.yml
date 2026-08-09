@@ -40,11 +40,12 @@ jobs:
           compression-level: 0
 
       - name: Publish latest release
-        uses: ncipollo/release-action@v2
+        uses: ncipollo/release-action@v1
         with:
           tag: latest
           name: "Build ${{ env.VERSION }}"
           body: "Build ${{ env.VERSION }} — ${{ env.DATETIME }}"
           artifacts: "site-${{ env.VERSION }}.tar.gz"
-          makeLatest: true
+          allowUpdates: true
           removeArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
