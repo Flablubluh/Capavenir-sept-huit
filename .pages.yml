@@ -1,0 +1,11 @@
+media: media
+content:
+  - name: actus
+    label: Actualités
+    type: collection
+    path: actus
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
