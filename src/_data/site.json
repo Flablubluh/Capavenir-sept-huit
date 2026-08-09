@@ -1,0 +1,32 @@
+{
+  "name": "CAP'AVENIR78",
+  "tagline": "Aide aux Devoirs",
+  "slogan": "Accompagner vers la réussite",
+  "phone": "06.58.89.62.30",
+  "phoneRaw": "0658896230",
+  "email": "capavenir78@gmail.com",
+  "website": "https://www.capavenir78.fr",
+  "websiteDisplay": "www.capavenir78.fr",
+  "department": "Yvelines (78)",
+  "departmentCode": "FR-78",
+  "facebook": "https://www.facebook.com/profile.php?id=61589032718546",
+  "instagram": "https://www.instagram.com/capavenir78?igsh=MWM2ZHlyNWE3cmVhNg==",
+  "colors": {
+    "primary": "#1a3a6b",
+    "primaryHover": "#1e4a8a",
+    "primaryDeep": "#0d2550",
+    "accent": "#f4a020",
+    "accentHover": "#e8920a",
+    "teal": "#2a9d8f",
+    "tealLight": "#3ab5a5"
+  },
+  "services": [
+    { "name": "Aide aux devoirs" },
+    { "name": "Stage de vacances" },
+    { "name": "Remise à niveau" },
+    { "name": "Coaching scolaire" },
+    { "name": "Suivi personnalisé" },
+    { "name": "Préparation aux examens" }
+  ],
+  "url": "https://capavenir78-nawygvq3.manus.space/"
+}

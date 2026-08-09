@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>{{ title or site.name }} — {{ tagline or site.tagline }}</title>
+  <meta name="description" content="{{ description or site.name + ' - ' + site.tagline }}" />
+
+  <!-- ── Geo / local SEO ─────────────────────────────────────── -->
+  <meta name="geo.region" content="{{ site.departmentCode }}" />
+  <meta name="geo.placename" content="Yvelines" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ── Open Graph ──────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:title" content="{{ title or site.name }} — {{ tagline or site.tagline }}" />
+  <meta property="og:description" content="{{ description or site.name + ' - ' + site.tagline }}" />
+  <meta property="og:image" content="{{ image or site.url + 'assets/images/hero-tutoring.webp' }}" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+
+  <!-- ── Twitter Card ────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title or site.name }} — {{ tagline or site.tagline }}" />
+  <meta name="twitter:description" content="{{ description or site.name + ' - ' + site.tagline }}" />
+  <meta name="twitter:image" content="{{ image or site.url + 'assets/images/hero-tutoring.webp' }}" />
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+  <!-- ── Preload critical assets ─────────────────────────────── -->
+  <link rel="preload" as="image" href="/assets/images/hero-tutoring.webp" />
+  <link rel="preload" as="font" href="/assets/fonts/montserrat-700.ttf" type="font/ttf" crossorigin />
+  <link rel="preload" as="font" href="/assets/fonts/montserrat-900.ttf" type="font/ttf" crossorigin />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  {% block structuredData %}{% endblock %}
+</head>
+<body>
+
+{% include "partials/nav.njk" %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% include "partials/footer.njk" %}
+
+<script src="/assets/script.js"></script>
+</body>
+</html>

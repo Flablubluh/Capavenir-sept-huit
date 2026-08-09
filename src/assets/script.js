@@ -39,11 +39,9 @@
   window.addEventListener('scroll', updateNavShadow, { passive: true });
 
   /* ── Active nav link tracking ───────────────────────────── */
-  var NAV_SECTIONS = ['accueil', 'apropos', 'services', 'tarifs', 'faq', 'contact'];
-
   function setActiveLink(activeId) {
     document.querySelectorAll('.nav-link').forEach(function (link) {
-      var href = link.getAttribute('href').replace('#', '');
+      var href = link.getAttribute('href').replace(/^\/?#/, '');
       if (href === activeId) {
         link.classList.add('text-[#1a3a6b]');
         link.classList.remove('text-gray-600');
@@ -55,8 +53,10 @@
   }
 
   window.addEventListener('scroll', function () {
-    var current = NAV_SECTIONS[0];
-    NAV_SECTIONS.forEach(function (id) {
+    var sections = document.querySelectorAll('.nav-link[href^="#"]');
+    var current = 'accueil';
+    sections.forEach(function (link) {
+      var id = link.getAttribute('href').replace('#', '');
       var el = document.getElementById(id);
       if (el && el.getBoundingClientRect().top <= 120) current = id;
     });
