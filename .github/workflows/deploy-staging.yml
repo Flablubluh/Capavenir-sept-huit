@@ -1,0 +1,50 @@
+name: Build (staging)
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Set version & date
+        run: |
+          echo "VERSION=$(date -u '+%Y-%j-%H')" >> $GITHUB_ENV
+          echo "DATETIME=$(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_ENV
+
+      - name: Create tarball
+        run: tar -czf "site-staging-$VERSION.tar.gz" _site/
+
+      - name: Verify output
+        run: ls -lh _site/index.html _site/actualites/index.html "site-staging-$VERSION.tar.gz"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-staging-${{ env.VERSION }}
+          path: site-staging-${{ env.VERSION }}.tar.gz
+          compression-level: 0
+
+      - name: Publish staging release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: staging
+          name: "Staging ${{ env.VERSION }}"
+          body: "Staging build ${{ env.VERSION }} — ${{ env.DATETIME }}"
+          artifacts: "site-staging-${{ env.VERSION }}.tar.gz"
+          allowUpdates: true
+          removeArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
