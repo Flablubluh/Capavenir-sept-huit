@@ -1,0 +1,9 @@
+[
+  { "id": "accueil",      "label": "Accueil",      "section": true },
+  { "id": "apropos",      "label": "À propos",     "section": true },
+  { "id": "services",     "label": "Nos Services", "section": true },
+  { "id": "actualites",   "label": "Actualités",   "href": "/actualites/" },
+  { "id": "tarifs",       "label": "Tarifs",       "section": true },
+  { "id": "faq",          "label": "FAQ",          "section": true },
+  { "id": "contact",      "label": "Contact",      "section": true }
+]

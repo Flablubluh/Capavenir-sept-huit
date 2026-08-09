@@ -1,213 +1,92 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>CAP'AVENIR78 - Aide aux Devoirs</title>
-  <meta name="description" content="CAP'AVENIR78 - Association d'aide aux devoirs et soutien scolaire pour primaire, collège et lycée dans les Yvelines (78). Accompagnement personnalisé, stages de vacances, remise à niveau." />
+---
+layout: base
+pageClass: home
+permalink: /index.html
+---
 
-  <!-- ── Geo / local SEO ─────────────────────────────────────── -->
-  <meta name="geo.region" content="FR-78" />
-  <meta name="geo.placename" content="Yvelines" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- ── Open Graph ──────────────────────────────────────────── -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://capavenir78-nawygvq3.manus.space/" />
-  <meta property="og:title" content="CAP'AVENIR78 - Aide aux Devoirs dans les Yvelines (78)" />
-  <meta property="og:description" content="Association loi 1901 d'aide aux devoirs et soutien scolaire pour primaire, collège et lycée dans les Yvelines (78). Petits groupes, intervenants diplômés, stages de vacances." />
-  <meta property="og:image" content="assets/images/hero-tutoring.webp" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="CAP'AVENIR78" />
-
-  <!-- ── Twitter Card ────────────────────────────────────────── -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CAP'AVENIR78 - Aide aux Devoirs dans les Yvelines (78)" />
-  <meta name="twitter:description" content="Association loi 1901 d'aide aux devoirs et soutien scolaire pour primaire, collège et lycée dans les Yvelines (78)." />
-  <meta name="twitter:image" content="assets/images/hero-tutoring.webp" />
-
-  <link rel="canonical" href="https://capavenir78-nawygvq3.manus.space/" />
-
-  <!-- ── Preload critical assets ─────────────────────────────── -->
-  <link rel="preload" as="image" href="assets/images/hero-tutoring.webp" />
-  <link rel="preload" as="font" href="assets/fonts/montserrat-700.ttf" type="font/ttf" crossorigin />
-  <link rel="preload" as="font" href="assets/fonts/montserrat-900.ttf" type="font/ttf" crossorigin />
-
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- ── JSON-LD: EducationalOrganization (local SEO) ────────── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["EducationalOrganization", "LocalBusiness"],
-    "name": "CAP'AVENIR78",
-    "alternateName": "CAP AVENIR 78",
-    "description": "Association loi 1901 d'aide aux devoirs et soutien scolaire pour les élèves de la primaire au lycée dans les Yvelines (78). Petits groupes, intervenants diplômés, stages de vacances.",
-    "url": "https://capavenir78-nawygvq3.manus.space/",
-    "telephone": "+33658896230",
-    "email": "capavenir78@gmail.com",
-    "sameAs": ["https://www.capavenir78.fr"],
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Yvelines",
-      "identifier": "FR-78"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Yvelines",
-      "postalCode": "78",
-      "addressCountry": "FR"
-    },
-    "priceRange": "Sur devis",
-    "knowsLanguage": "fr",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Services de soutien scolaire",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aide aux devoirs", "description": "Accompagnement quotidien pour la réalisation des devoirs, primaire au lycée."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stage de vacances", "description": "Stages intensifs pendant les vacances scolaires pour combler les lacunes."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remise à niveau",   "description": "Programme ciblé pour rattraper les notions non acquises."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching scolaire", "description": "Méthodes de travail, organisation et gestion du temps."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Préparation aux examens", "description": "Préparation au Brevet et au Baccalauréat."}}
-      ]
-    }
-  }
-  </script>
-
-  <!-- ── JSON-LD: FAQPage (Google rich results) ───────────────── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qui peut bénéficier des services de CAP'AVENIR78 ?",
-        d
-        "acceptedAnswer": {"@type": "Answer", "text": "Nos services s'adressent aux élèves de la primaire au lycée, souhaitant renforcer leurs compétences scolaires, consolider leurs acquis ou préparer leurs examens (Brevet, Baccalauréat). Nous accueillons tous les élèves des Yvelines (78) qui ont besoin d'un accompagnement personnalisé."}
-      },
-      {
-        "@type": "Question",
-        "name": "Comment inscrire mon enfant ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "L'inscription se fait en plusieurs étapes : 1. Contactez-nous par téléphone ou email pour un premier échange. 2. Complétez le formulaire d'inscription. 3. Fournissez les documents requis (bulletins scolaires si disponibles). 4. Réglez la cotisation annuelle et les frais des prestations choisies."}
-      },
-      {
-        "@type": "Question",
-        "name": "Combien d'élèves y a-t-il par groupe ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Pour garantir un suivi personnalisé, les groupes sont volontairement limités : maximum 6 élèves par groupe en soutien scolaire régulier, et 10 élèves maximum pour deux intervenants lors des stages de vacances."}
-      },
-      {
-        "@type": "Question",
-        "name": "L'adhésion à l'association est-elle obligatoire ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'adhésion annuelle à l'association est obligatoire pour bénéficier de nos services. Elle permet de soutenir les activités de l'association et de participer à notre mission d'aide à la réussite scolaire."}
-      },
-      {
-        "@type": "Question",
-        "name": "Quels sont les moyens de paiement acceptés ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Nous acceptons les chèques, les virements bancaires et les espèces (dans nos locaux avec justificatif). Des facilités de paiement peuvent être envisagées selon les situations."}
-      },
-      {
-        "@type": "Question",
-        "name": "Dans quelles matières proposez-vous un soutien ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Nous proposons un soutien dans toutes les matières scolaires : mathématiques, français, langues vivantes, sciences, histoire-géographie, etc. Notre équipe s'adapte aux besoins spécifiques de chaque élève."}
-      },
-      {
-        "@type": "Question",
-        "name": "Comment se déroule un premier cours d'essai ?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Nous proposons un premier entretien gratuit pour évaluer les besoins de votre enfant et définir ensemble le programme d'accompagnement le plus adapté."}
-      }
+{% block structuredData %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["EducationalOrganization", "LocalBusiness"],
+  "name": "{{ site.name }}",
+  "alternateName": "CAP AVENIR 78",
+  "description": "Association loi 1901 d'aide aux devoirs et soutien scolaire pour les élèves de la primaire au lycée dans les Yvelines (78). Petits groupes, intervenants diplômés, stages de vacances.",
+  "url": "{{ site.url }}",
+  "telephone": "+33{{ site.phoneRaw }}",
+  "email": "{{ site.email }}",
+  "sameAs": ["https://{{ site.websiteDisplay }}"],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Yvelines",
+    "identifier": "{{ site.departmentCode }}"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Yvelines",
+    "postalCode": "78",
+    "addressCountry": "FR"
+  },
+  "priceRange": "Sur devis",
+  "knowsLanguage": "fr",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de soutien scolaire",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aide aux devoirs", "description": "Accompagnement quotidien pour la réalisation des devoirs, primaire au lycée."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stage de vacances", "description": "Stages intensifs pendant les vacances scolaires pour combler les lacunes."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remise à niveau",   "description": "Programme ciblé pour rattraper les notions non acquises."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Coaching scolaire", "description": "Méthodes de travail, organisation et gestion du temps."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Préparation aux examens", "description": "Préparation au Brevet et au Baccalauréat."}}
     ]
   }
-  </script>
-</head>
-<body>
-<!-- ═══ HEADER / NAV ═══════════════════════════════════════════════════ -->
-<header>
+}
+</script>
 
-  <!-- Top announcement banner -->
-  <div class="bg-[#1a3a6b] text-white text-sm py-2 text-center px-4">
-    <span class="font-semibold">🎒 Inscriptions ouvertes pour l'année scolaire 2026-2027 !</span>
-    <a href="tel:0658896230" class="ml-3 underline hover:text-[#f4a020] transition-colors">Contactez-nous : 06.58.89.62.30</a>
-  </div>
-
-  <!-- Sticky navigation -->
-  <nav id="main-nav" class="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
-    <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
-      <div class="flex items-center justify-between h-20">
-
-        <!-- Logo -->
-        <a href="#accueil" class="flex items-center gap-3 flex-shrink-0">
-        <img src="assets/images/logo.png" alt="CAP'AVENIR78" width="130" height="172">
-        </a>
-        <!-- 
-          <div class="w-12 h-12 flex-shrink-0"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-  <ellipse cx="40" cy="12" rx="7" ry="10" fill="#2a9d8f" transform="rotate(-15 40 12)"/>
-  <ellipse cx="28" cy="18" rx="6" ry="9" fill="#2a9d8f" transform="rotate(-35 28 18)"/>
-  <ellipse cx="52" cy="18" rx="6" ry="9" fill="#2a9d8f" transform="rotate(35 52 18)"/>
-  <ellipse cx="20" cy="28" rx="5" ry="8" fill="#3ab5a5" transform="rotate(-50 20 28)"/>
-  <ellipse cx="60" cy="28" rx="5" ry="8" fill="#3ab5a5" transform="rotate(50 60 28)"/>
-  <rect x="36" y="28" width="8" height="30" rx="1" fill="#f4a020"/>
-  <polygon points="36,58 44,58 40,68" fill="#f6d08a"/>
-  <rect x="36" y="28" width="8" height="5" fill="#e8920a"/>
-  <rect x="22" y="66" width="36" height="6" rx="2" fill="#1a3a6b"/>
-  <rect x="38" y="64" width="4" height="8" fill="#1a3a6b"/>
-</svg></div>
-          <div class="leading-tight">
-            <div class="font-black text-[#1a3a6b] text-lg tracking-tight" style="font-family:Montserrat,sans-serif">
-              CAP'AVENIR<span class="text-[#2a9d8f]">78</span>
-            </div>
-            <div class="text-[10px] font-semibold text-[#1a3a6b] tracking-widest uppercase">Aide aux Devoirs</div>
-          </div>
-        </a>
-        -->
-        <!-- Desktop links -->
-        <div class="hidden lg:flex items-center gap-1">
-          <a href="#accueil"  class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-[#1a3a6b]"  style="font-family:Montserrat,sans-serif">Accueil</a>
-          <a href="#apropos"  class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-gray-600" style="font-family:Montserrat,sans-serif">À propos</a>
-          <a href="#services" class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-gray-600" style="font-family:Montserrat,sans-serif">Nos Services</a>
-          <a href="#tarifs"   class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-gray-600" style="font-family:Montserrat,sans-serif">Tarifs</a>
-          <a href="#faq"      class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-gray-600" style="font-family:Montserrat,sans-serif">FAQ</a>
-          <a href="#contact"  class="nav-link px-4 py-2 text-sm font-semibold transition-colors rounded-md hover:text-[#1a3a6b] hover:bg-blue-50 text-gray-600" style="font-family:Montserrat,sans-serif">Contact</a>
-        </div>
-
-        <!-- Desktop CTA -->
-        <div class="hidden lg:flex items-center gap-3">
-          <a href="tel:0658896230" class="flex items-center gap-2 text-sm font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>06.58.89.62.30</span>
-          </a>
-          <a href="#contact" class="bg-[#f4a020] hover:bg-[#e8920a] text-white font-bold px-5 py-2.5 rounded-full text-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5" style="font-family:Montserrat,sans-serif">S'inscrire</a>
-        </div>
-
-        <!-- Hamburger -->
-        <button id="menu-btn" class="lg:hidden p-2 text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" aria-label="Menu">
-          <span id="icon-menu-open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
-          <span id="icon-menu-close" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </button>
-
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
-      <div class="container mx-auto px-4 py-4 flex flex-col gap-1">
-        <a href="#accueil"  class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">Accueil</a>
-        <a href="#apropos"  class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">À propos</a>
-        <a href="#services" class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">Nos Services</a>
-        <a href="#tarifs"   class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">Tarifs</a>
-        <a href="#faq"      class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">FAQ</a>
-        <a href="#contact"  class="px-4 py-3 text-sm font-semibold text-gray-700 hover:text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors" style="font-family:Montserrat,sans-serif">Contact</a>
-        <div class="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
-          <a href="tel:0658896230" class="flex items-center gap-2 px-4 py-3 text-sm font-semibold text-[#1a3a6b] hover:bg-blue-50 rounded-lg transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 06.58.89.62.30
-          </a>
-          <a href="#contact" class="bg-[#f4a020] text-white font-bold px-5 py-3 rounded-full text-sm text-center transition-colors hover:bg-[#e8920a]" style="font-family:Montserrat,sans-serif">S'inscrire maintenant</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-</header>
-<main>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui peut bénéficier des services de {{ site.name }} ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nos services s'adressent aux élèves de la primaire au lycée, souhaitant renforcer leurs compétences scolaires, consolider leurs acquis ou préparer leurs examens (Brevet, Baccalauréat). Nous accueillons tous les élèves des Yvelines (78) qui ont besoin d'un accompagnement personnalisé."}
+    },
+    {
+      "@type": "Question",
+      "name": "Comment inscrire mon enfant ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "L'inscription se fait en plusieurs étapes : 1. Contactez-nous par téléphone ou email pour un premier échange. 2. Complétez le formulaire d'inscription. 3. Fournissez les documents requis (bulletins scolaires si disponibles). 4. Réglez la cotisation annuelle et les frais des prestations choisies."}
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'élèves y a-t-il par groupe ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Pour garantir un suivi personnalisé, les groupes sont volontairement limités : maximum 6 élèves par groupe en soutien scolaire régulier, et 10 élèves maximum pour deux intervenants lors des stages de vacances."}
+    },
+    {
+      "@type": "Question",
+      "name": "L'adhésion à l'association est-elle obligatoire ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'adhésion annuelle à l'association est obligatoire pour bénéficier de nos services. Elle permet de soutenir les activités de l'association et de participer à notre mission d'aide à la réussite scolaire."}
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les moyens de paiement acceptés ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nous acceptons les chèques, les virements bancaires et les espèces (dans nos locaux avec justificatif). Des facilités de paiement peuvent être envisagées selon les situations."}
+    },
+    {
+      "@type": "Question",
+      "name": "Dans quelles matières proposez-vous un soutien ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nous proposons un soutien dans toutes les matières scolaires : mathématiques, français, langues vivantes, sciences, histoire-géographie, etc. Notre équipe s'adapte aux besoins spécifiques de chaque élève."}
+    },
+    {
+      "@type": "Question",
+      "name": "Comment se déroule un premier cours d'essai ?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nous proposons un premier entretien gratuit pour évaluer les besoins de votre enfant et définir ensemble le programme d'accompagnement le plus adapté."}
+    }
+  ]
+}
+</script>
+{% endblock %}
 
 <!-- ═══ HERO ════════════════════════════════════════════════════════════ -->
 <section id="accueil" class="relative bg-white overflow-hidden min-h-[90vh] flex items-center">
@@ -248,7 +127,7 @@
         </h1>
 
         <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
-          CAP'AVENIR78 accompagne les élèves de la primaire au lycée grâce à un encadrement
+          {{ site.name }} accompagne les élèves de la primaire au lycée grâce à un encadrement
           <strong class="text-[#1a3a6b]">personnalisé et bienveillant</strong>,
           pour les aider à atteindre leur plein potentiel.
         </p>
@@ -283,7 +162,7 @@
         </div>
 
         <p class="mt-8 text-[#2a9d8f] font-semibold italic text-lg" style="font-family:Montserrat,sans-serif">
-          "Accompagner vers la réussite"
+          "{{ site.slogan }}"
         </p>
       </div>
 
@@ -292,7 +171,7 @@
 
         <!-- Main image -->
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-          <img src="assets/images/hero-tutoring.webp" alt="Tutrice aidant une élève avec ses devoirs" class="w-full h-[500px] lg:h-[580px] object-cover" fetchpriority="high" />
+          <img src="/assets/images/hero-tutoring.webp" alt="Tutrice aidant une élève avec ses devoirs" class="w-full h-[500px] lg:h-[580px] object-cover" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a6b]/20 to-transparent"></div>
         </div>
 
@@ -335,7 +214,7 @@
       <!-- Left: image -->
       <div class="relative" data-animate="x-left">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-          <img src="assets/images/Ymen.png" alt="L'équipe de CAP'AVENIR78" class="w-full h-[420px] object-cover" loading="lazy" />
+          <img src="/assets/images/Ymen.png" alt="L'équipe de {{ site.name }}" class="w-full h-[420px] object-cover" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a6b]/30 to-transparent"></div>
         </div>
         <div class="absolute -bottom-8 -right-8 w-40 h-40 rounded-3xl bg-[#f4a020]/10 border-2 border-[#f4a020]/20 -z-10" aria-hidden="true"></div>
@@ -353,16 +232,16 @@
         <div class="w-16 h-1 bg-[#f4a020] rounded-full mb-6"></div>
 
         <p class="text-gray-600 leading-relaxed mb-5 text-base">
-          Après plus de vingt ans dans l’enseignement, j’ai constaté que les difficultés scolaires ne sont pas toujours liées au niveau des élèves. Elles sont souvent liées à un manque de confiance en soi, de méthode et de repères.
+          Après plus de vingt ans dans l'enseignement, j'ai constaté que les difficultés scolaires ne sont pas toujours liées au niveau des élèves. Elles sont souvent liées à un manque de confiance en soi, de méthode et de repères.
         </p>
         <p class="text-gray-600 leading-relaxed mb-8 text-base">
-          Beaucoup de jeunes se découragent et finissent par penser qu’ils ne sont “pas capables”, alors qu’ils n’ont simplement pas appris à s’organiser, à travailler efficacement et à développer les bonnes méthodes.
+          Beaucoup de jeunes se découragent et finissent par penser qu'ils ne sont "pas capables", alors qu'ils n'ont simplement pas appris à s'organiser, à travailler efficacement et à développer les bonnes méthodes.
         </p>
         <p class="text-gray-600 leading-relaxed mb-8 text-base">
-          C’est pour répondre à cette réalité qu’est née l’association Cap Avenir.
+          C'est pour répondre à cette réalité qu'est née l'association Cap Avenir.
         </p>
         <p class="text-gray-600 leading-relaxed mb-8 text-base">
-          Notre objectif est d’aider chaque jeune à reprendre confiance, consolider ses bases, acquérir une méthode de travail rigoureuse et retrouver le goût d’apprendre, afin de progresser durablement et construire son avenir avec sérénité.
+          Notre objectif est d'aider chaque jeune à reprendre confiance, consolider ses bases, acquérir une méthode de travail rigoureuse et retrouver le goût d'apprendre, afin de progresser durablement et construire son avenir avec sérénité.
         </p>
 
         <!-- Values grid -->
@@ -413,7 +292,7 @@
       <h2 class="text-3xl lg:text-4xl font-black text-[#1a3a6b] mb-4" style="font-family:Montserrat,sans-serif">Nos Engagements</h2>
       <div class="w-16 h-1 bg-[#f4a020] rounded-full mx-auto mb-6"></div>
       <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-        CAP'AVENIR78 offre un soutien bienveillant et adapté pour permettre à chaque élève de progresser avec confiance et enthousiasme.
+        {{ site.name }} offre un soutien bienveillant et adapté pour permettre à chaque élève de progresser avec confiance et enthousiasme.
       </p>
     </div>
 
@@ -519,7 +398,7 @@
       <!-- Right: image + why box -->
       <div data-animate="x-right">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl mb-8">
-          <img src="assets/images/services-primary.webp" alt="Élève travaillant avec enthousiasme" class="w-full h-[360px] object-cover object-top" loading="lazy" />
+          <img src="/assets/images/services-primary.webp" alt="Élève travaillant avec enthousiasme" class="w-full h-[360px] object-cover object-top" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a6b]/40 to-transparent"></div>
           <div class="absolute bottom-6 left-6 right-6 text-white">
             <p class="text-2xl font-black leading-tight" style="font-family:Montserrat,sans-serif">
@@ -530,7 +409,7 @@
         </div>
 
         <div class="bg-[#1a3a6b] rounded-3xl p-8 text-white">
-          <h3 class="text-xl font-black mb-4" style="font-family:Montserrat,sans-serif">Pourquoi choisir CAP'AVENIR78 ?</h3>
+          <h3 class="text-xl font-black mb-4" style="font-family:Montserrat,sans-serif">Pourquoi choisir {{ site.name }} ?</h3>
           <ul class="space-y-3">
               <li class="flex items-start gap-3 text-sm">
                 <span class="w-5 h-5 bg-[#f4a020] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -573,19 +452,17 @@
 <!-- ═══ STATS ═══════════════════════════════════════════════════════════ -->
 <section id="stats-section" class="relative py-20 lg:py-28 overflow-hidden">
   <div class="absolute inset-0">
-    <img src="assets/images/stats-bg.webp" alt="" class="w-full h-full object-cover" aria-hidden="true" loading="lazy" />
+    <img src="/assets/images/stats-bg.webp" alt="" class="w-full h-full object-cover" aria-hidden="true" loading="lazy" />
     <div class="absolute inset-0 bg-[#1a3a6b]/85"></div>
   </div>
-
   <div class="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
     <div class="text-center mb-16" data-animate>
       <div class="inline-flex items-center gap-2 text-[#f4a020] font-bold text-sm uppercase tracking-widest mb-4">
-        <span class="w-8 h-0.5 bg-[#f4a020]"></span>CAP'AVENIR78 en chiffres<span class="w-8 h-0.5 bg-[#f4a020]"></span>
+        <span class="w-8 h-0.5 bg-[#f4a020]"></span>{{ site.name }} en chiffres<span class="w-8 h-0.5 bg-[#f4a020]"></span>
       </div>
       <h2 class="text-3xl lg:text-4xl font-black text-white mb-4" style="font-family:Montserrat,sans-serif">L'accompagnement qui fait la différence</h2>
       <div class="w-16 h-1 bg-[#f4a020] rounded-full mx-auto"></div>
     </div>
-
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center" data-animate data-delay="1">
             <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-colors">
@@ -630,7 +507,6 @@
 <!-- ═══ PRICING ═════════════════════════════════════════════════════════ -->
 <section id="tarifs" class="py-20 lg:py-28 bg-[#f8faff]">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
-
     <div class="text-center mb-16" data-animate>
       <div class="inline-flex items-center gap-2 text-[#2a9d8f] font-bold text-sm uppercase tracking-widest mb-4">
         <span class="w-8 h-0.5 bg-[#2a9d8f]"></span>Nos formules<span class="w-8 h-0.5 bg-[#2a9d8f]"></span>
@@ -641,10 +517,8 @@
         Des tarifs adaptés à chaque famille. L'adhésion annuelle à l'association est obligatoire pour bénéficier de nos services. Contactez-nous pour un devis personnalisé.
       </p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8 items-start">
           <div class="bg-white border border-gray-100 shadow-sm hover:shadow-xl rounded-3xl transition-all duration-700" data-animate data-delay="1">
-            
             <div class="p-8">
               <div class="w-12 h-1.5 rounded-full mb-6" style="background-color:#1a3a6b"></div>
               <h3 class="text-xl font-black mb-1 text-[#1a3a6b]" style="font-family:Montserrat,sans-serif">Aide aux Devoirs</h3>
@@ -689,7 +563,6 @@
             </div>
           </div>
           <div class="relative bg-[#1a3a6b] text-white shadow-2xl scale-105 rounded-3xl transition-all duration-700" data-animate data-delay="2">
-            
             <div class="absolute -top-4 left-1/2 -translate-x-1/2">
               <div class="flex items-center gap-1.5 bg-[#f4a020] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Le plus demandé
@@ -704,48 +577,17 @@
                 <div class="text-xs mt-1 text-blue-200">Tarif selon la durée du stage</div>
               </div>
               <ul class="space-y-3 mb-8">
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Stage intensif multi-jours</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Remise à niveau ciblée</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Toutes les vacances scolaires</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Max 10 élèves / 2 intervenants</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Bilan de fin de stage</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-blue-100">Préparation à la rentrée</span>
-                </li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Stage intensif multi-jours</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Remise à niveau ciblée</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Toutes les vacances scolaires</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Max 10 élèves / 2 intervenants</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Bilan de fin de stage</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#f4a020"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-blue-100">Préparation à la rentrée</span></li>
               </ul>
-              <a href="#contact" class="block w-full text-center font-bold py-3.5 rounded-full text-sm transition-all duration-200 hover:-translate-y-0.5 bg-[#f4a020] hover:bg-[#e8920a] text-white hover:shadow-lg" style="">Réserver un stage</a>
+              <a href="#contact" class="block w-full text-center font-bold py-3.5 rounded-full text-sm transition-all duration-200 hover:-translate-y-0.5 bg-[#f4a020] hover:bg-[#e8920a] text-white hover:shadow-lg">Réserver un stage</a>
             </div>
           </div>
           <div class="bg-white border border-gray-100 shadow-sm hover:shadow-xl rounded-3xl transition-all duration-700" data-animate data-delay="3">
-            
             <div class="p-8">
               <div class="w-12 h-1.5 rounded-full mb-6" style="background-color:#2a9d8f"></div>
               <h3 class="text-xl font-black mb-1 text-[#1a3a6b]" style="font-family:Montserrat,sans-serif">Coaching Scolaire</h3>
@@ -755,43 +597,16 @@
                 <div class="text-xs mt-1 text-gray-400">Tarif selon le programme</div>
               </div>
               <ul class="space-y-3 mb-8">
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-gray-600">Méthodes de travail efficaces</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-gray-600">Gestion du temps</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-gray-600">Préparation aux examens</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-gray-600">Suivi individualisé</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                  </div>
-                  <span class="text-sm text-gray-600">Objectifs personnalisés</span>
-                </li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-gray-600">Méthodes de travail efficaces</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-gray-600">Gestion du temps</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-gray-600">Préparation aux examens</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-gray-600">Suivi individualisé</span></li>
+                <li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color:#2a9d8f20"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><span class="text-sm text-gray-600">Objectifs personnalisés</span></li>
               </ul>
               <a href="#contact" class="block w-full text-center font-bold py-3.5 rounded-full text-sm transition-all duration-200 hover:-translate-y-0.5 border-2 hover:shadow-md" style="border-color:#2a9d8f;color:#2a9d8f">En savoir plus</a>
             </div>
           </div>
     </div>
-
-    <!-- Note -->
     <div class="mt-12 text-center" data-animate>
       <div class="inline-flex items-center gap-3 bg-[#2a9d8f]/10 border border-[#2a9d8f]/20 rounded-2xl px-6 py-4">
         <div class="w-8 h-8 bg-[#2a9d8f] rounded-full flex items-center justify-center flex-shrink-0">
@@ -803,7 +618,6 @@
         </p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -811,10 +625,8 @@
 <section class="py-20 bg-white">
   <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
     <div class="relative bg-gradient-to-br from-[#1a3a6b] to-[#0d2550] rounded-3xl overflow-hidden p-10 lg:p-16 text-center" data-animate="scale">
-      <!-- Decorative circles -->
       <div class="absolute top-0 right-0 w-64 h-64 bg-[#2a9d8f]/10 rounded-full -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
       <div class="absolute bottom-0 left-0 w-48 h-48 bg-[#f4a020]/10 rounded-full translate-y-1/2 -translate-x-1/2" aria-hidden="true"></div>
-      <!-- Decorative leaves -->
       <div class="absolute top-6 left-6 opacity-20" aria-hidden="true">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
           <ellipse cx="30" cy="15" rx="12" ry="18" fill="#2a9d8f" transform="rotate(-20 30 15)"/>
@@ -827,7 +639,6 @@
           <ellipse cx="45" cy="35" rx="9" ry="14" fill="#f4a020" transform="rotate(40 45 35)"/>
         </svg>
       </div>
-
       <div class="relative z-10">
         <div class="inline-flex items-center gap-2 bg-[#f4a020]/20 text-[#f4a020] font-bold text-xs px-4 py-2 rounded-full mb-6 border border-[#f4a020]/30">
           Premier entretien gratuit et sans engagement
@@ -836,13 +647,13 @@
           Aidez votre enfant à <span class="text-[#f4a020]">réussir</span> dès aujourd'hui !
         </h2>
         <p class="text-blue-200 text-base lg:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Rejoignez les familles qui font confiance à CAP'AVENIR78 pour accompagner leurs enfants vers la réussite scolaire dans les Yvelines.
+          Rejoignez les familles qui font confiance à {{ site.name }} pour accompagner leurs enfants vers la réussite scolaire dans les Yvelines.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#contact" class="inline-flex items-center gap-2 bg-[#f4a020] hover:bg-[#e8920a] text-white font-black px-10 py-4 rounded-full text-base transition-all duration-200 hover:shadow-2xl hover:-translate-y-1" style="font-family:Montserrat,sans-serif">
             S'inscrire maintenant <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="tel:0658896230" class="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-10 py-4 rounded-full text-base transition-all duration-200 hover:bg-white/10" style="font-family:Montserrat,sans-serif">
+          <a href="tel:{{ site.phoneRaw }}" class="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-10 py-4 rounded-full text-base transition-all duration-200 hover:bg-white/10" style="font-family:Montserrat,sans-serif">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Appeler maintenant
           </a>
         </div>
@@ -854,7 +665,6 @@
 <!-- ═══ FAQ ══════════════════════════════════════════════════════════════ -->
 <section id="faq" class="py-20 lg:py-28 bg-white">
   <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
-
     <div class="text-center mb-16" data-animate>
       <div class="inline-flex items-center gap-2 text-[#2a9d8f] font-bold text-sm uppercase tracking-widest mb-4">
         <span class="w-8 h-0.5 bg-[#2a9d8f]"></span>Questions fréquentes<span class="w-8 h-0.5 bg-[#2a9d8f]"></span>
@@ -865,11 +675,10 @@
         Vous avez des questions sur nos services ? Retrouvez les réponses aux questions les plus fréquemment posées par les familles.
       </p>
     </div>
-
     <div class="space-y-4">
         <div class="faq-item border border-gray-100 rounded-2xl overflow-hidden" data-animate data-delay="1">
           <button class="faq-btn w-full flex items-center justify-between gap-4 p-6 text-left bg-white hover:bg-gray-50 transition-colors" aria-expanded="false">
-            <span class="font-bold text-[#1a3a6b] text-sm lg:text-base leading-snug" style="font-family:Montserrat,sans-serif">Qui peut bénéficier des services de CAP'AVENIR78 ?</span>
+            <span class="font-bold text-[#1a3a6b] text-sm lg:text-base leading-snug" style="font-family:Montserrat,sans-serif">Qui peut bénéficier des services de {{ site.name }} ?</span>
             <span class="faq-chevron flex-shrink-0 text-[#2a9d8f] transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="faq-answer overflow-hidden" style="max-height:0">
@@ -944,33 +753,19 @@
             </div>
           </div>
         </div>
-        <!-- <div class="faq-item border border-gray-100 rounded-2xl overflow-hidden" data-animate data-delay="8">
-          <button class="faq-btn w-full flex items-center justify-between gap-4 p-6 text-left bg-white hover:bg-gray-50 transition-colors" aria-expanded="false">
-            #<span class="font-bold text-[#1a3a6b] text-sm lg:text-base leading-snug" style="font-family:Montserrat,sans-serif">Comment se déroule un premier cours d'essai ?</span>
-            <span class="faq-chevron flex-shrink-0 text-[#2a9d8f] transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer overflow-hidden" style="max-height:0">
-            <div class="px-6 pb-6 bg-[#f8faff] border-t border-gray-100">
-              <p class="text-gray-600 text-sm leading-relaxed pt-4">Nous proposons un premier entretien gratuit pour évaluer les besoins de votre enfant et définir ensemble le programme d'accompagnement le plus adapté. Contactez-nous pour convenir d'un rendez-vous.</p>
-            </div>
-          </div>
-        </div> -->
     </div>
-
     <div class="mt-12 text-center" data-animate>
       <p class="text-gray-600 mb-4">Vous ne trouvez pas la réponse à votre question ?</p>
       <a href="#contact" class="inline-flex items-center gap-2 bg-[#1a3a6b] hover:bg-[#1e4a8a] text-white font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5" style="font-family:Montserrat,sans-serif">
         Contactez-nous directement
       </a>
     </div>
-
   </div>
 </section>
 
 <!-- ═══ CONTACT ═════════════════════════════════════════════════════════ -->
 <section id="contact" class="py-20 lg:py-28 bg-[#f8faff]">
   <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
-
     <div class="text-center mb-16" data-animate>
       <div class="inline-flex items-center gap-2 text-[#2a9d8f] font-bold text-sm uppercase tracking-widest mb-4">
         <span class="w-8 h-0.5 bg-[#2a9d8f]"></span>Rejoignez-nous<span class="w-8 h-0.5 bg-[#2a9d8f]"></span>
@@ -981,10 +776,7 @@
         Prêt à accompagner votre enfant vers la réussite ? Contactez-nous pour un premier échange gratuit et sans engagement.
       </p>
     </div>
-
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
-
-      <!-- Left: contact info + social + image -->
       <div data-animate="x-left">
         <div class="space-y-4 mb-10">
               <div class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -993,7 +785,7 @@
                 </div>
                 <div>
                   <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Téléphone</div>
-                  <a href="tel:0658896230" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">06.58.89.62.30</a>
+                  <a href="tel:{{ site.phoneRaw }}" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">{{ site.phone }}</a>
                 </div>
               </div>
               <div class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -1002,7 +794,7 @@
                 </div>
                 <div>
                   <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Email</div>
-                  <a href="mailto:capavenir78@gmail.com" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">capavenir78@gmail.com</a>
+                  <a href="mailto:{{ site.email }}" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">{{ site.email }}</a>
                 </div>
               </div>
               <div class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -1011,7 +803,7 @@
                 </div>
                 <div>
                   <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Site web</div>
-                  <a href="https://www.capavenir78.fr" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">www.capavenir78.fr</a>
+                  <a href="https://{{ site.websiteDisplay }}" class="font-semibold text-[#1a3a6b] hover:text-[#2a9d8f] transition-colors">{{ site.websiteDisplay }}</a>
                 </div>
               </div>
               <div class="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
@@ -1020,39 +812,30 @@
                 </div>
                 <div>
                   <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Département</div>
-                  <span class="font-semibold text-[#1a3a6b]">Yvelines (78)</span>
+                  <span class="font-semibold text-[#1a3a6b]">{{ site.department }}</span>
                 </div>
               </div>
         </div>
-
-        <!-- Social -->
         <div class="bg-[#1a3a6b] rounded-3xl p-8 text-white">
           <h3 class="text-lg font-black mb-2" style="font-family:Montserrat,sans-serif">Suivez-nous sur les réseaux</h3>
-          <p class="text-blue-200 text-sm mb-6">Restez informés des actualités, stages et événements de CAP'AVENIR78.</p>
+          <p class="text-blue-200 text-sm mb-6">Restez informés des actualités, stages et événements de {{ site.name }}.</p>
           <div class="flex gap-4">
-            <a href=" https://www.facebook.com/profile.php?id=61589032718546
-" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-[#f4a020] px-5 py-3 rounded-xl transition-colors text-sm font-bold">
+            <a href="{{ site.facebook }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-[#f4a020] px-5 py-3 rounded-xl transition-colors text-sm font-bold">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook
             </a>
-            <a href="https://www.instagram.com/capavenir78?igsh=MWM2ZHlyNWE3cmVhNg==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-[#f4a020] px-5 py-3 rounded-xl transition-colors text-sm font-bold">
+            <a href="{{ site.instagram }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-[#f4a020] px-5 py-3 rounded-xl transition-colors text-sm font-bold">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Instagram
             </a>
           </div>
         </div>
-
-        <!-- Decorative image -->
         <div class="mt-6 relative rounded-3xl overflow-hidden h-40">
-          <img src="assets/images/contact-bg.webp" alt="" class="w-full h-full object-cover" aria-hidden="true" loading="lazy" />
+          <img src="/assets/images/contact-bg.webp" alt="" class="w-full h-full object-cover" aria-hidden="true" loading="lazy" />
           <div class="absolute inset-0 bg-[#2a9d8f]/70 flex items-center justify-center">
-            <p class="text-white text-xl font-black text-center px-4" style="font-family:Montserrat,sans-serif">"Accompagner vers la réussite"</p>
+            <p class="text-white text-xl font-black text-center px-4" style="font-family:Montserrat,sans-serif">"{{ site.slogan }}"</p>
           </div>
         </div>
       </div>
-
-      <!-- Right: form -->
       <div data-animate="x-right">
-
-        <!-- Success message (hidden by default) -->
         <div id="form-success" class="hidden bg-white rounded-3xl p-12 shadow-sm border border-gray-100 text-center">
           <div class="w-20 h-20 bg-[#2a9d8f]/10 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -1064,30 +847,22 @@
           <p class="text-gray-600 mb-6">Votre client mail va s'ouvrir. Nous vous répondrons dans les plus brefs délais.</p>
           <button id="form-reset" class="text-[#2a9d8f] font-semibold hover:underline text-sm">Envoyer un autre message</button>
         </div>
-
-        <!-- Contact form -->
         <form id="contact-form" class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
           <h3 class="text-xl font-black text-[#1a3a6b] mb-6" style="font-family:Montserrat,sans-serif">Demande d'information / Inscription</h3>
-
           <div class="grid sm:grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Nom complet *</label>
-              <input type="text" name="name" required placeholder="Votre nom"
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
+              <input type="text" name="name" required placeholder="Votre nom" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
             </div>
             <div>
               <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Téléphone</label>
-              <input type="tel" name="phone" placeholder="06 XX XX XX XX"
-                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
+              <input type="tel" name="phone" placeholder="{{ site.phone }}" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
             </div>
           </div>
-
           <div class="mb-4">
             <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Email *</label>
-            <input type="email" name="email" required placeholder="votre@email.com"
-              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
+            <input type="email" name="email" required placeholder="votre@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors" />
           </div>
-
           <div class="grid sm:grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Niveau scolaire</label>
@@ -1102,143 +877,22 @@
               <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Service souhaité</label>
               <select name="service" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors bg-white">
                 <option value="">Sélectionner...</option>
-                <option>Aide aux devoirs</option>
-                <option>Stage de vacances</option>
-                <option>Remise à niveau</option>
-                <option>Coaching scolaire</option>
-                <option>Suivi personnalisé</option>
-                <option>Préparation aux examens</option>
+                {% for svc in site.services %}
+                  <option>{{ svc.name }}</option>
+                {% endfor %}
               </select>
             </div>
           </div>
-
           <div class="mb-6">
             <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Message</label>
-            <textarea name="message" rows="4" placeholder="Décrivez les besoins de votre enfant, ses difficultés, vos disponibilités..."
-              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors resize-none"></textarea>
+            <textarea name="message" rows="4" placeholder="Décrivez les besoins de votre enfant, ses difficultés, vos disponibilités..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#2a9d8f] focus:outline-none focus:ring-2 focus:ring-[#2a9d8f]/20 text-sm transition-colors resize-none"></textarea>
           </div>
-
           <button type="submit" class="w-full flex items-center justify-center gap-2 bg-[#f4a020] hover:bg-[#e8920a] text-white font-bold py-4 rounded-full text-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5" style="font-family:Montserrat,sans-serif">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> Envoyer ma demande
           </button>
           <p class="text-xs text-gray-400 text-center mt-4">Réponse garantie sous 48h ouvrées. Premier entretien gratuit et sans engagement.</p>
         </form>
-
       </div>
     </div>
   </div>
 </section>
-</main>
-
-<!-- ═══ FOOTER ═══════════════════════════════════════════════════════════ -->
-<footer class="bg-[#1a3a6b] text-white">
-  <div class="container mx-auto px-4 lg:px-8 max-w-7xl py-16">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-      <!-- Brand -->
-      <div class="lg:col-span-1">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-16 h-16 flex-shrink-0"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-  <ellipse cx="40" cy="12" rx="7" ry="10" fill="#2a9d8f" transform="rotate(-15 40 12)"/>
-  <ellipse cx="28" cy="18" rx="6" ry="9" fill="#2a9d8f" transform="rotate(-35 28 18)"/>
-  <ellipse cx="52" cy="18" rx="6" ry="9" fill="#2a9d8f" transform="rotate(35 52 18)"/>
-  <ellipse cx="20" cy="28" rx="5" ry="8" fill="#3ab5a5" transform="rotate(-50 20 28)"/>
-  <ellipse cx="60" cy="28" rx="5" ry="8" fill="#3ab5a5" transform="rotate(50 60 28)"/>
-  <rect x="36" y="28" width="8" height="30" rx="1" fill="#f4a020"/>
-  <polygon points="36,58 44,58 40,68" fill="#f6d08a"/>
-  <rect x="36" y="28" width="8" height="5" fill="#e8920a"/>
-  <rect x="22" y="66" width="36" height="6" rx="2" fill="white" opacity="0.3"/>
-  <rect x="38" y="64" width="4" height="8" fill="white" opacity="0.3"/>
-</svg></div>
-          <div>
-            <div class="font-black text-white text-xl tracking-tight" style="font-family:Montserrat,sans-serif">
-              CAP'AVENIR<span class="text-[#2a9d8f]">78</span>
-            </div>
-            <div class="text-xs font-semibold text-blue-300 tracking-widest uppercase">Aide aux Devoirs</div>
-          </div>
-        </div>
-        <p class="text-blue-200 text-sm leading-relaxed mb-6">
-          Association d'aide aux devoirs et de soutien scolaire pour les élèves de la primaire au lycée dans les Yvelines (78).
-        </p>
-        <p class="text-[#f4a020] font-semibold italic text-base" style="font-family:Montserrat,sans-serif">"Accompagner vers la réussite"</p>
-      </div>
-
-      <!-- Navigation -->
-      <div>
-        <h4 class="font-black text-white text-sm uppercase tracking-widest mb-5" style="font-family:Montserrat,sans-serif">Navigation</h4>
-        <div class="w-8 h-0.5 bg-[#f4a020] rounded-full mb-5"></div>
-        <ul class="space-y-3"><li><a href="#accueil" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Accueil</a></li><li><a href="#apropos" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>À propos</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Nos Services</a></li><li><a href="#tarifs" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Tarifs</a></li><li><a href="#faq" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>FAQ</a></li><li><a href="#contact" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Contact</a></li></ul>
-      </div>
-
-      <!-- Services -->
-      <div>
-        <h4 class="font-black text-white text-sm uppercase tracking-widest mb-5" style="font-family:Montserrat,sans-serif">Nos Services</h4>
-        <div class="w-8 h-0.5 bg-[#f4a020] rounded-full mb-5"></div>
-        <ul class="space-y-3"><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Aide aux devoirs</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Stage de vacances</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Remise à niveau</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Coaching scolaire</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Suivi personnalisé</a></li><li><a href="#services" class="text-blue-200 hover:text-[#f4a020] text-sm transition-colors flex items-center gap-2 group"><span class="w-0 group-hover:w-3 h-0.5 bg-[#f4a020] transition-all duration-200 rounded-full"></span>Préparation aux examens</a></li></ul>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h4 class="font-black text-white text-sm uppercase tracking-widest mb-5" style="font-family:Montserrat,sans-serif">Contact</h4>
-        <div class="w-8 h-0.5 bg-[#f4a020] rounded-full mb-5"></div>
-        <ul class="space-y-4">
-          <li>
-            <a href="tel:0658896230" class="flex items-center gap-3 text-blue-200 hover:text-[#f4a020] text-sm transition-colors group">
-              <div class="w-8 h-8 bg-white/10 group-hover:bg-[#f4a020] rounded-lg flex items-center justify-center transition-colors flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              06.58.89.62.30
-            </a>
-          </li>
-          <li>
-            <a href="mailto:capavenir78@gmail.com" class="flex items-center gap-3 text-blue-200 hover:text-[#f4a020] text-sm transition-colors group">
-              <div class="w-8 h-8 bg-white/10 group-hover:bg-[#f4a020] rounded-lg flex items-center justify-center transition-colors flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </div>
-              capavenir78@gmail.com
-            </a>
-          </li>
-          <li>
-            <a href="https://www.capavenir78.fr" class="flex items-center gap-3 text-blue-200 hover:text-[#f4a020] text-sm transition-colors group">
-              <div class="w-8 h-8 bg-white/10 group-hover:bg-[#f4a020] rounded-lg flex items-center justify-center transition-colors flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-              </div>
-              www.capavenir78.fr
-            </a>
-          </li>
-        </ul>
-        <div class="mt-6">
-          <p class="text-blue-300 text-xs uppercase tracking-wider font-bold mb-3">Réseaux sociaux</p>
-          <div class="flex gap-3">
-            <a href="https://www.facebook.com/profile.php?id=61589032718546" target="_blank" rel="noopener noreferrer"
-               class="w-10 h-10 bg-white/10 hover:bg-[#f4a020] rounded-xl flex items-center justify-center transition-colors" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/capavenir78?igsh=MWM2ZHlyNWE3cmVhNg==" target="_blank" rel="noopener noreferrer"
-               class="w-10 h-10 bg-white/10 hover:bg-[#f4a020] rounded-xl flex items-center justify-center transition-colors" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Bottom bar -->
-  <div class="border-t border-white/10">
-    <div class="container mx-auto px-4 lg:px-8 max-w-7xl py-6">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-300">
-        <p>&copy; <span id="year"></span> CAP'AVENIR78 — Association loi 1901. Tous droits réservés.</p>
-        <p class="flex items-center gap-1.5">
-          Fait avec <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#f4a020" stroke="#f4a020" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="text-[#f4a020]"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> pour la réussite des élèves des Yvelines
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script src="assets/script.js"></script>
-</body>
-</html>

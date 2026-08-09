@@ -1,0 +1,53 @@
+---
+layout: base
+title: Actualités
+description: "Les actualités et événements de CAP'AVENIR78 — aide aux devoirs, stages de vacances, et soutien scolaire dans les Yvelines (78)."
+permalink: /actualites/index.html
+---
+
+<section class="py-20 lg:py-28 bg-white">
+  <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+
+    <div class="text-center mb-16" data-animate>
+      <div class="inline-flex items-center gap-2 text-[#2a9d8f] font-bold text-sm uppercase tracking-widest mb-4">
+        <span class="w-8 h-0.5 bg-[#2a9d8f]"></span>Restez informés<span class="w-8 h-0.5 bg-[#2a9d8f]"></span>
+      </div>
+      <h1 class="text-3xl lg:text-5xl font-black text-[#1a3a6b] mb-4" style="font-family:Montserrat,sans-serif">Actualités</h1>
+      <div class="w-16 h-1 bg-[#f4a020] rounded-full mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
+        Retrouvez toutes les actualités, événements et informations de {{ site.name }}.
+      </p>
+    </div>
+
+    {% if collections.actus.length > 0 %}
+    <div class="space-y-8">
+      {% for article in collections.actus %}
+      <article class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow" data-animate>
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+          <h2 class="text-xl font-black text-[#1a3a6b]" style="font-family:Montserrat,sans-serif">
+            <a href="{{ article.url }}" class="hover:text-[#2a9d8f] transition-colors">{{ article.data.title or article.fileSlug }}</a>
+          </h2>
+          <time class="text-sm text-gray-400 font-semibold flex-shrink-0"{% if article.date %} datetime="{{ article.date }}"{% endif %}>
+            {% if article.date %}{{ article.date | readableDate }}{% endif %}
+          </time>
+        </div>
+        {% set excerpt = article.templateContent | striptags | safe %}
+        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{{ excerpt }}</p>
+        <a href="{{ article.url }}" class="inline-flex items-center gap-2 text-[#2a9d8f] font-bold text-sm hover:text-[#1a3a6b] transition-colors">
+          Lire la suite <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-16" data-animate>
+      <div class="w-20 h-20 bg-[#f4a020]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f4a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="12" x2="12" y1="8" y2="16"/><line x1="8" x2="16" y1="12" y2="12"/></svg>
+      </div>
+      <h2 class="text-2xl font-black text-[#1a3a6b] mb-3" style="font-family:Montserrat,sans-serif">Bientôt des actualités</h2>
+      <p class="text-gray-600">Revenez prochainement pour découvrir nos actualités et événements.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
