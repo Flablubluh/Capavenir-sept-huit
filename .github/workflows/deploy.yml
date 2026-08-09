@@ -40,12 +40,10 @@ jobs:
           compression-level: 0
 
       - name: Publish latest release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: latest
-          name: "Build ${{ env.VERSION }}"
-          body: "Build ${{ env.VERSION }} — ${{ env.DATETIME }}"
-          artifacts: "site-${{ env.VERSION }}.tar.gz"
-          allowUpdates: true
-          removeArtifacts: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create latest "site-$VERSION.tar.gz" \
+            --title "Build $VERSION" \
+            --notes "Build $VERSION — $DATETIME"
