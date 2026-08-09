@@ -22,20 +22,26 @@ jobs:
       - run: npm run build
 
       - name: Set version & date
+        id: meta
         run: |
-          echo "VERSION=$(date -u '+%Y-%j-%H')" >> $GITHUB_ENV
-          echo "DATETIME=$(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_ENV
+          v=$(date -u '+%Y-%j-%H')
+          d=$(date -u '+%Y-%m-%d %H:%M UTC')
+          echo "version=$v" >> $GITHUB_OUTPUT
+          echo "datetime=$d" >> $GITHUB_OUTPUT
 
       - name: Create tarball
-        run: tar -czf "site-staging-$VERSION.tar.gz" -C _site .
+        run: tar -czf site.tar.gz -C _site .
+
+      - name: Debug tarball contents
+        run: tar -tzf site.tar.gz | head -20
 
       - name: Verify output
-        run: ls -lh _site/index.html _site/actualites/index.html "site-staging-$VERSION.tar.gz"
+        run: ls -lh _site/index.html _site/actualites/index.html site.tar.gz
 
       - uses: actions/upload-artifact@v4
         with:
-          name: site-staging-${{ env.VERSION }}
-          path: site-staging-${{ env.VERSION }}.tar.gz
+          name: site-staging-${{ steps.meta.outputs.version }}
+          path: site.tar.gz
           compression-level: 0
 
       - name: Publish staging release
@@ -43,6 +49,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete staging --yes --cleanup-tag 2>/dev/null || true
-          gh release create staging "site-staging-$VERSION.tar.gz" \
-            --title "Staging $VERSION" \
-            --notes "Staging build $VERSION — $DATETIME"
+          gh release create staging site.tar.gz \
+            --title "${{ steps.meta.outputs.version }}" \
+            --notes "Staging ${{ steps.meta.outputs.version }} — ${{ steps.meta.outputs.datetime }}
+
+          ### Download
+          \`\`\`
+          curl -LO ${{ github.server_url }}/${{ github.repository }}/releases/download/staging/site.tar.gz
+          \`\`\`
+          Do **not** use the Source code archive — use the attached **site.tar.gz** asset."
