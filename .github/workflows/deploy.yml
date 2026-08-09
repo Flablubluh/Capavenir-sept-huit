@@ -3,13 +3,14 @@ name: Build
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v4
 
@@ -21,10 +22,17 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Set version
+        run: echo "VERSION=$(date -u '+%Y-%j-%H')" >> $GITHUB_ENV
+
       - name: Create tarball
-        run: tar -czf site.tar.gz _site/
+        run: tar -czf "site-${{ env.VERSION }}.tar.gz" _site/
+
+      - name: Verify output
+        run: ls -lh _site/index.html _site/actualites/index.html "site-${{ env.VERSION }}.tar.gz"
 
       - uses: actions/upload-artifact@v4
         with:
-          name: site
-          path: site.tar.gz
+          name: site-${{ env.VERSION }}
+          path: site-${{ env.VERSION }}.tar.gz
+          compression-level: 0
