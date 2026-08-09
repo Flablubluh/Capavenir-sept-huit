@@ -27,7 +27,7 @@ jobs:
           echo "DATETIME=$(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_ENV
 
       - name: Create tarball
-        run: tar -czf "site-staging-$VERSION.tar.gz" _site/
+        run: tar -czf "site-staging-$VERSION.tar.gz" -C _site .
 
       - name: Verify output
         run: ls -lh _site/index.html _site/actualites/index.html "site-staging-$VERSION.tar.gz"
