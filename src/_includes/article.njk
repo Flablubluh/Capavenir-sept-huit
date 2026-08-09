@@ -3,7 +3,7 @@ layout: base
 ---
 
 <!-- ═══ ARTICLE HERO ═════════════════════════════════════════ -->
-<section class="relative bg-gradient-to-br from-[#1a3a6b] to-[#0d2550] py-16 lg:py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-[#1a3a6b] to-[#0d2550] py-12 sm:py-16 lg:py-20 overflow-hidden">
   <!-- Decorative elements -->
   <div class="absolute top-0 right-0 w-64 h-64 bg-[#2a9d8f]/10 rounded-full -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
   <div class="absolute bottom-0 left-0 w-48 h-48 bg-[#f4a020]/10 rounded-full translate-y-1/2 -translate-x-1/2" aria-hidden="true"></div>
@@ -18,7 +18,7 @@ layout: base
       <span class="text-[#f4a020] font-semibold truncate max-w-xs">{{ title or fileSlug }}</span>
     </nav>
 
-    <h1 class="text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-4 leading-tight" style="font-family:Montserrat,sans-serif">
+    <h1 class="text-2xl lg:text-4xl xl:text-5xl font-black text-white mb-4 leading-tight" style="font-family:Montserrat,sans-serif">
       {{ title or fileSlug }}
     </h1>
     {% if page.date %}
@@ -32,7 +32,7 @@ layout: base
 
 <!-- ═══ ARTICLE CONTENT ═══════════════════════════════════════ -->
 <section class="py-12 lg:py-16 bg-white">
-  <div class="container mx-auto px-4 lg:px-8 max-w-lg">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-lg md:max-w-xl lg:max-w-2xl">
     <article class="prose prose-lg">
       {{ content | safe }}
     </article>

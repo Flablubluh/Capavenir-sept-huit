@@ -6,14 +6,14 @@ permalink: /actualites/index.html
 ---
 
 <!-- ═══ ACTUALITÉS HERO ═══════════════════════════════════════ -->
-<section class="relative bg-gradient-to-br from-[#1a3a6b] to-[#0d2550] py-16 lg:py-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-[#1a3a6b] to-[#0d2550] py-12 sm:py-16 lg:py-20 overflow-hidden">
   <div class="absolute top-0 right-0 w-64 h-64 bg-[#2a9d8f]/10 rounded-full -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
   <div class="absolute bottom-0 left-0 w-48 h-48 bg-[#f4a020]/10 rounded-full translate-y-1/2 -translate-x-1/2" aria-hidden="true"></div>
-  <div class="container mx-auto px-4 lg:px-8 max-w-4xl relative z-10 text-center">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10 text-center">
     <div class="inline-flex items-center gap-2 text-[#f4a020] font-bold text-sm uppercase tracking-widest mb-4">
       <span class="w-8 h-0.5 bg-[#f4a020]"></span>Restez informés<span class="w-8 h-0.5 bg-[#f4a020]"></span>
     </div>
-    <h1 class="text-3xl lg:text-5xl font-black text-white mb-4" style="font-family:Montserrat,sans-serif">Actualités</h1>
+    <h1 class="text-2xl sm:text-3xl lg:text-5xl font-black text-white mb-4" style="font-family:Montserrat,sans-serif">Actualités</h1>
     <div class="w-16 h-1 bg-[#f4a020] rounded-full mx-auto mb-6"></div>
     <p class="text-blue-200 max-w-2xl mx-auto text-base leading-relaxed">
       Retrouvez toutes les actualités, événements et informations de {{ site.name }}.
@@ -22,15 +22,15 @@ permalink: /actualites/index.html
 </section>
 
 <!-- ═══ ARTICLES LIST ═════════════════════════════════════════ -->
-<section class="py-16 lg:py-20 bg-[#f8faff]">
-  <div class="container mx-auto px-4 lg:px-8 max-w-4xl">
+<section class="py-12 sm:py-16 lg:py-20 bg-[#f8faff]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
 
   {% if collections.actus.length > 0 %}
     <div class="grid gap-6">
       {% for article in collections.actus %}
       {% set thumb = article.templateContent | firstImage %}
       <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col sm:flex-row" data-animate>
-        <div class="sm:w-56 sm:flex-shrink-0 bg-[#1a3a6b]/5 flex items-center justify-center h-44 sm:h-auto overflow-hidden">
+        <div class="sm:w-48 md:w-56 sm:flex-shrink-0 bg-[#1a3a6b]/5 flex items-center justify-center h-40 sm:h-auto overflow-hidden">
           {% if thumb %}
             <img src="{{ thumb }}" alt="" class="w-full h-full object-cover" loading="lazy" />
           {% else %}
