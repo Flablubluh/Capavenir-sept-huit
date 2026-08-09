@@ -2,8 +2,6 @@ module.exports = function (eleventyConfig) {
   /* ── Passthrough assets (copied verbatim) ──────── */
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("media");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
 
   /* ── Layout alias ───────────────────────────────── */
   eleventyConfig.addLayoutAlias("base", "layout.njk");
@@ -40,6 +38,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("stripMarkdownImages", (str) => {
     if (!str) return "";
     return str.replace(/!\[[^\]]*\]\([^)]+\)/g, "").trim();
+  });
+
+  /* ── Extract first image from markdown ──────────── */
+  eleventyConfig.addFilter("firstImage", (str) => {
+    if (!str) return null;
+    const match = str.match(/!\[[^\]]*\]\(([^)]+)\)/);
+    return match ? match[1] : null;
   });
 
   /* ── Markdown library config: add classes to images ─ */
