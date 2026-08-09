@@ -30,7 +30,7 @@ jobs:
           echo "datetime=$d" >> $GITHUB_OUTPUT
 
       - name: Create tarball
-        run: shopt -s dotglob && tar -czf site.tar.gz -C _site *
+        run: (cd _site && shopt -s dotglob && tar -czf ../site.tar.gz *)
 
       - name: Debug tarball contents
         run: tar -tzf site.tar.gz | head -20
