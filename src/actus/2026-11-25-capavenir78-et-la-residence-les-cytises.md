@@ -17,5 +17,3 @@ Nous remercions chaleureusement l'équipe de la résidence Les Cytises pour son 
 
 ![](/media/IMG-20261116-WA0010.jpg)
 
-![](/media/IMG-20261116-WA0011.jpg)
-
