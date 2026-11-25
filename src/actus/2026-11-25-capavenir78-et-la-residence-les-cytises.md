@@ -13,7 +13,7 @@ Parce que l'éducation ne se limite pas aux apprentissages scolaires, Cap'Avenir
 
 Nous remercions chaleureusement l'équipe de la résidence Les Cytises pour son accueil et sa collaboration, ainsi que les résidents et les enfants qui ont contribué à la réussite de ce beau moment.
 
- 
+
 
 ![](/media/20261109_171738.jpg)
 
