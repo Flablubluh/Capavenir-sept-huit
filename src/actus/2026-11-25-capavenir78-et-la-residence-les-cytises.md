@@ -1,5 +1,5 @@
 ---
-title: CAP’AVENIR78 et la résidence Les Cytises
+title: Atelier lecture à la résidence Les Cytises
 ---
 ++**Des livres, des sourires et des générations qui se rencontrent aux Cytises**++
 
@@ -20,8 +20,6 @@ Nous remercions chaleureusement l'équipe de la résidence Les Cytises pour son 
 ![](/media/20261109_171742.jpg)
 
 ![](/media/20261109_171745.jpg)
-
-![](/media/20261109_171938.jpg)
 
 ![](/media/IMG-20261116-WA0010.jpg)
 
